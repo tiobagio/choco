@@ -7,7 +7,7 @@
 #include_recipe "chocolatey::default"
 
 # disable AntiMalware Service Executable
-powershell_script 'Set host file so the instance knows where to find chef-server' do
+powershell_script 'Dsiable Windows Defender' do
     code <<-EOH
     Set-MpPreference -DisableRealtimeMonitoring $true
     EOH
